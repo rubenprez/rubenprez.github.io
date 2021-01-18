@@ -15,13 +15,13 @@
      background-color: #292731;
    }
    .D{
-     background:url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+    	background:url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
      background-position:10px;
-     -webkit-background-clip: text;
+    	-webkit-background-clip: text;
        color: transparent;
-     font-size:75px;
+   	font-size:400px;
        font-family:Helvetica;
-     font-weight:bold;
+   	font-weight:bold;
      margin:0 auto;background-position-x: 52%;
      background-position-y: 48px;
    }
