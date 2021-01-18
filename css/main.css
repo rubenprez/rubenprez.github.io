@@ -16,7 +16,7 @@
    }
    .D{
      background:url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
-     background-position:center:10px;
+     background-position:10px;
      -webkit-background-clip: text;
        color: transparent;
      font-size:75px;
@@ -28,7 +28,7 @@
 
    .moveBox {
      margin:0 auto;
-     width:480px;
+     width:300px;
    }
 /*
  * Remove text-shadow in selection highlight:
