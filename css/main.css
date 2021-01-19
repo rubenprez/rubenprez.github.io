@@ -15,20 +15,20 @@
      background-color: #292731;
    }
    .D{
-    	background:url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
+    	background:url("https://giphy.com/gifs/desktoppaints-lightning-electric-electricity-SsBz0oSJ1botYaLqAR") repeat;
      background-position:10px;
     	-webkit-background-clip: text;
        color: transparent;
-   	font-size:200px;
+   	font-size:400px;
        font-family:Helvetica;
    	font-weight:bold;
-     margin:0 auto;background-position-x: 25%;
+     margin:0 auto;background-position-x: 52%;
      background-position-y: 48px;
    }
 
    .moveBox {
      margin:0 auto;
-     width:500px;
+     width:300px;
    }
 /*
  * Remove text-shadow in selection highlight:
