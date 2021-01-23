@@ -11,6 +11,10 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+   html {
+     background-color: #292731;
+
+   }
    .nav{
        border:1px solid #ccc;
        border-width:1px 0;
@@ -27,13 +31,6 @@
        padding:10px;
    }
 
-
-
-
-   html {
-     background-color: #292731;
-
-   }
    .D{
     	background:url("http://i.giphy.com/8SylEdgXn0BIQ.gif") repeat;
      background-position:10px;
