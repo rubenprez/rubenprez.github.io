@@ -1,5 +1,8 @@
 
-
+*{
+    margin: 0px;
+    paddign: 0px;
+}
 
 nav{
   background-color: black;
