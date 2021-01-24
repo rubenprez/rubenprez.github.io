@@ -46,7 +46,7 @@
  */
 
 nav{
-  background-color: none;
+  background-color: black;
 }
 
 nav ul{
@@ -54,7 +54,7 @@ nav ul{
 }
 
 nav ul li{
-  display: inline-block;
+  display: inline;
   padding: 10px;
   color: white;
   font-family: Arial;
