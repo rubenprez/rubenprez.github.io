@@ -45,6 +45,21 @@
  * Customize the background color to match your design.
  */
 
+nav{
+  background-color: red;
+}
+
+nav ul{
+  text-align: center;
+}
+
+nav{
+  display: inline-block;
+  padding: 20px;
+  color: white; 
+}
+
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
