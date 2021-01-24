@@ -53,10 +53,10 @@ nav ul{
   text-align: center;
 }
 
-nav{
+nav ul li{
   display: inline-block;
   padding: 20px;
-  color: white; 
+  color: white;
 }
 
 
