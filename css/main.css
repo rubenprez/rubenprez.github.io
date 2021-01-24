@@ -45,24 +45,6 @@
  * Customize the background color to match your design.
  */
 
-nav{
-  background-color: black;
-}
-
-nav ul{
-  text-align: center;
-}
-
-nav ul li{
-  display: inline;
-  padding: 10px;
-  color: white;
-  font-family: Arial;
-  cursor: pointer;
-  transition: .2s ;
-}
-
-
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;

@@ -1,0 +1,19 @@
+
+
+
+nav{
+  background-color: black;
+}
+
+nav ul{
+  text-align: center;
+}
+
+nav ul li{
+  display: inline;
+  padding: 10px;
+  color: white;
+  font-family: Arial;
+  cursor: pointer;
+  transition: .2s ;
+}
