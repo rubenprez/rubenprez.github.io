@@ -14,43 +14,7 @@
    html {
      background-color: #292731;
 /**/
-   }
-   .topnav {
-     position: relative;
-     overflow: hidden;
-     background-color: #393;
-   }
-
-   .topnav a {
-     float: left;
-     color: #f2f2f2;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-     font-size: 17px;
-   }
-
-   .topnav a:hover {
-     background-color: #ddd;
-     color: black;
-   }
-
-   .topnav a.active {
-     background-color: #4CAF50;
-     color: white;
-   }
-
-   .topnav-centered a {
-     float: none;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-   }
-
-   .topnav-right {
-     float: right;
-   }
+  
 /**/
 /*  for D effect  */
    .D{
