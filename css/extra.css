@@ -18,7 +18,7 @@ nav ul li{
     color: white;
     font-family: Arial;
     cursor: pointer;
-    transition: .2s ;
+    transition: .2s;
 }
 
 li:hover{
