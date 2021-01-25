@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-color: red;
+    background-color: black;
 }
 
 nav ul{
@@ -14,5 +14,13 @@ nav ul{
 
 nav ul li{
     display: inline-block;
+    padding: 20px;
+    color: white;
+    font-family: Arial;
+    cursor: pointer;
+    transition: .2s ;
+}
 
+li:hover{
+    background-color: black;
 }
