@@ -1,18 +1,18 @@
 
-  {
+*{
     margin: 0px;
     padding: 0px;
 }
 
 nav{
-  background-color: black;
+    background-color: red;
 }
 
 nav ul{
-  text-align: center;
+    text-align: center;
 }
 
 nav ul li{
-  display: inline-block;
+    display: inline-block;
 
 }
