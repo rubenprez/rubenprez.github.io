@@ -14,9 +14,5 @@ nav ul{
 
 nav ul li{
   display: inline-block;
-  padding: 10px;
-  color: white;
-  font-family: Arial;
-  cursor: pointer;
-  transition: .2s ;
+
 }
