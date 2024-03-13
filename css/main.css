@@ -18,7 +18,7 @@
 /**/
 /*  for D effect  */
    .D{
-    	background:url("") repeat;
+    	/* background:url("") repeat; */
      background-position:10px;
     	-webkit-background-clip: text;
        color: transparent;
