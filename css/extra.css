@@ -5,7 +5,7 @@
 }
 
 nav{
-    background-color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 nav ul{
@@ -15,12 +15,12 @@ nav ul{
 nav ul li{
     display: inline-block;
     padding: 20px;
-    color: white;
-    font-family: Arial;
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     transition: .2s;
 }
 
 li:hover{
-    background-color: black;
-}
+    background-color: rgb(255, 255, 255);
+}   

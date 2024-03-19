@@ -1,16 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="no-js" lang="">
+
 <head>
-
-
-
   <meta charset="utf-8">
   <title>RubenPerezIII</title>
   <meta name="author" content="RubenPerezIII">
-  <meta name="keywords" content="">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
@@ -23,88 +19,190 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
-  <meta name="theme-color" content="#fafafa">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: ();
+      background-size: cover;
+      background-position: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
+    }
+    
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: -5px;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-inline: 20px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      text-align: center;
+      color: rgb(103, 177, 246);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
+    
+    h1.text-effect {
+      font-size: 75px;
+    }
+    
+    /* Style for the videos container */
+    .videos-container {
+      display: flex;
+      flex-wrap: wrap; /* Allow videos to wrap to the next line */
+      justify-content: space-between; /* Evenly distribute space between video elements */
+      align-items: flex-start; /* Align items to the top */
+      margin-top: 50px; /* Center the container horizontally */
+      max-width: 1200px; /* Adjust as needed */
+      width: 100%; /* Ensure container takes full width */
+    }
 
-<style>
-  ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333376;
+    /* Style for each video */
+    /* Style for each video */
+    .video {
+     flex: 1; /* Distribute available space equally among all videos */
+     max-width: calc(33.33% - 20px); /* Limit each video to occupy one-third of the container with spacing */
+     position: relative; /* Set position to relative */
+     margin: 0 0px 20px; /* Add margin between videos */
+    }
 
-  }
 
-  li {
-    float:left;
-  }
+    /* Style for video dimensions */
+    video {
+      width: 100%; /* Set the desired width */
+      height: auto; /* Set the desired height */
+      min-width: 240px; /* Specify a minimum width */
+    }
 
-  li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-  }
+    /* Adjust video size for smaller screens */
+    @media screen and (max-width: 768px) {
+      video {
+        flex: 1 0 100%; /* Make each video occupy 100% of the container */
+    max-width: 100%; /* Set maximum width to 100% for smaller screens */
+      }
+    }
 
-  li a:hover {
-    background-color: #111111;
-  }
-</style>
+    /* Style for section titles */
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 36px;
+      position: fixed;
+      bottom: 0px; /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title {
+      margin: 0 20px;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333; /* Adjust background color as needed */
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    /* Style for individual section titles */
+    .section-title:nth-of-type(1) {
+      margin: -150px 100px 10px 100px; /* top right bottom left */
+    }
+    
+    /* Style for individual section titles */
+    .section-title:nth-of-type(2) {
+      margin: -150px 10px 10px 10px; /* top right bottom left */
+    }
+
+    /* Style for individual section titles */
+    .section-title:nth-of-type(3) {
+      margin: -150px 100px 10px 100px; /* top right bottom left */
+    }
+
+    .resume-links {
+      margin-bottom: 10px;
+    }
+
+    /* Style for links within video containers */
+    .video a {
+      display: none; /* Hide the links */
+    }
+  </style>
 </head>
 
 <body>
+
   <header>
-    <h1 style="font-size:60px;">Ruben Perez</h1>
+    <h1 class="text-effect">Ruben Perez III</h1>
   </header>
 
-  <p></p>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
 
-    <nav>
-      <ul style="list-style-type:disc">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://www.linkedin.com/in/rubenaperez/"target='_blank'>LinkedIn</a></li>
-          <li><a href="#about"target='_blank'>About Me</a></li>
-      </ul>
-    </nav>
-</body>
-</html>
-  <!-- target blank is so that a new tab opens when selecting link -->
+  <!-- Videos container -->
+  <div class="videos-container">
+    <!-- First video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="cyberpunk_AR.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <!-- link for font style -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  <style>
-         h1 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-         h2 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-         h3 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-         h4 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-         h5 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-         h6 {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-          p {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-          a {text-align: center;color:white;font-family: "Audiowide", sans-serif;font-size: 24px}
-  </style>
+    <!-- Second video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="cyberpunk_motion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <div class="moveBox">
-  <div class="D">III
+    <!-- Third video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="lighttech_motion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
   </div>
 
-      <h1></h1>
-      <br></br>
+  <!-- Section titles -->
+  <div class="section-titles">
+    <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
+    <h2 class="section-title"><a href="beats.html">Beats</a></h2>
+    <h2 class="section-title"><a href="liveAV.html">live AV</a></h2>
+  </div>
 
-      <h2><a href="Resume-RubenPerezIII-2021.docx"> CV </a></h2>
-      <br><hr></br>
-
-      <h2><strong> Recordings </strong></h2>
-
-      <br><hr></br>
-      <h2><a href="livelighting.html"> Live Lighting </a></h2>
-
-      <br><hr></br>
-      <h2> Electronics </h2>
-
-      <br><hr></br>
-      <h2> Sounds </h2>
   <!-- Add your site or application content here -->
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
@@ -113,16 +211,14 @@
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+    window.ga = function() {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
   </script>
   <script src="https://www.google-analytics.com/analytics.js" async></script>
-  
-
-  <iframe width="320" height="240" 
-  src="https://www.youtube.com/embed/9IFwBC_JocM?autoplay=1&mute=1&playlist=9IFwBC_JocM&loop=1"> 
-  allowfullscreen></iframe>
-
 
 </body>
 
