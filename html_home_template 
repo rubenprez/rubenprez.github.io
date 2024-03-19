@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>RubenPerezIII</title>
+  <meta name="author" content="RubenPerezIII">
+  <meta name="keywords" content="">
+  <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: ();
+      background-size: cover;
+      background-position: center;
+    }
+    
+    header {
+      text-align: center;
+      margin-top: 0px;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-inline: 20px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      text-align: center;
+      color: rgb(103, 177, 246);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
+    
+    h1.text-effect {
+      font-size: 75px;
+    }
+    
+    /* Style for the videos container */
+    .videos-container {
+      display: flex;
+      justify-content: center; /* Center the videos horizontally */
+      align-items: center; /* Center the videos vertically */
+      margin-top: 10px; /* Adjust as needed */
+      width: 100%; /* Ensure container takes full width */
+      overflow-x: auto; /* Enable horizontal scrolling if videos exceed screen width */
+    }
+    
+    /* Style for each video */
+    .video {
+      margin: 0 45px; /* Adjust the spacing between videos */
+    }
+    
+    /* Style for video dimensions */
+    video {
+      width: 360px; /* Set the desired width */
+      height: 640px; /* Set the desired height */
+    }
+
+    /* Adjust video size for smaller screens */
+    @media screen and (max-width: 768px) {
+      video {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Maintain aspect ratio */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="text-effect">Ruben Perez III</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Videos container -->
+  <div class="videos-container">
+    <!-- First video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="cyberpunk_AR.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Second video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="cyberpunk_motion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Third video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="lighttech_motion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <br>
+
+  <h2 style="margin-bottom: 25px;"><a href="beats.html">Beats</a></h2>
+  <hr style="margin-top: 0px; margin-bottom: 0px;">
+
+  <h2 style="margin-bottom: 25px;"><a href="#live-lighting">live Lighting</a></h2>
+  <hr style="margin-top: 0px; margin-bottom: 0px;">
+
+  <h2 style="margin-bottom: 25px;"><a href="#electronics">Electronics</a></h2>
+  <hr style="margin-top: 0px; margin-bottom: 0px;">
+
+  <h2 style="margin-bottom: 25px;"><a href="RubenPerez_AudioVisual_Resume_2024.docx">AV Resume</a></h2>
+  <hr style="margin-top: 0px; margin-bottom: 0px;">
+
+  <h2 style="margin-bottom: 100px;"><a href="RubenPerez_QualityAssurance_Resume_2024.docx">QA Resume</a></h2>
+
+
+  <!-- Add your site or application content here -->
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function() {
+      ga.q.push(arguments)
+    };
+    ga.q = [];
+    ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto');
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+
+</body>
+
+</html>
+

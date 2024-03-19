@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>RubenPerezIII</title>
+  <meta name="author" content="RubenPerezIII">
+  <meta name="keywords" content="">
+  <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Particle Effect</title>
+  <style>
+    /* CSS to style the canvas element */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff; /* Background color of the canvas */
+      z-index: -1; /* Place the canvas behind other elements */
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-image: ();
+      background-size: cover;
+      background-position: center;
+    }
+    
+    header {
+      text-align: center;
+      margin-top: 0;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin-top: -5px;
+      text-align: center;
+    }
+    
+    nav ul li {
+      display: inline;
+      margin-inline: 20px;
+    }
+    
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a {
+      text-align: center;
+      color: rgb(103, 177, 246);
+      font-family: "Audiowide", sans-serif;
+      font-size: 24px;
+    }
+    
+    h1.text-effect {
+      font-size: 75px;
+    }
+    
+    /* Style for the videos container */
+    .videos-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0px;
+      width: 100%;
+      overflow-x: hidden; /* Hide overflow */
+      transition: margin-left 2s; /* Smooth transition for margin-left */
+    }
+    /* Style for the jazzalley video dimensions */
+    .video.jazz-alley-video video,
+    .video.qclub-video video {
+      width: 480px; /* Adjust the width as needed */
+      height: 360px; /* Adjust the height as needed */
+      object-fit: cover; /* Crop the video */
+      opacity: 0; /* Initially hide video */
+      animation: fadeIn 2s ease-in-out forwards; /* Add fade-in animation */
+    }
+
+    /* Style for each video */
+    .video {
+      margin: 0 45px;
+    }
+    
+    
+
+
+    /* Style for video dimensions */
+    video {
+      width: 360px; /* Initial width */
+      height: 640px; /* Initial height */
+      transition: transform 0.5s ease-in-out;
+    }
+    .slide-left:hover {
+      transform: translateX(-50%); /* Slide left by 50% */
+    }
+    .slide-right:hover {
+      transform: translateX(50%); /* Slide right by 50% */
+}
+
+    /* Adjust video size for smaller screens */
+    @media screen and (max-width: 768px) {
+      video {
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    /* Particle effect */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+    
+    .particle {
+      position: absolute;
+      background-color: rgb(103, 177, 246);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      animation: particle-animation 2s ease-out infinite;
+    }
+    
+    @keyframes particle-animation {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(720deg);
+        opacity: 0;
+      }
+    }
+    
+    /* Style for the equalizer canvas */
+    canvas {
+      width: 100%;
+      height: 150px;
+      background-color:;
+    }
+    
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="text-effect">Ruben Perez III</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Videos container -->
+  <div class="videos-container" id="videos-container">
+    <!-- First video -->
+    <div class="video">
+      <video autoplay loop>
+        <source src="lighttech_motion.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Second video -->
+    <div class="video qclub-video" style="margin: 0;">
+      <video controls class="qclub-video">
+        <source src="qclub_3_clip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <!-- Third video -->
+    <div class="video jazz-alley-video" style="margin: 0;">
+      <video controls class="jazz-alley-video">
+        <source src="jazzalley_1_clip.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    // Trigger cool effect animation
+    window.onload = function() {
+      var coolEffect = document.getElementById('cool-effect');
+      coolEffect.classList.add('cool-effect-animation');
+    };
+  </script>
+</body>
+</html>
