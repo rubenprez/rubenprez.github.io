@@ -1,40 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>RubenPerezIII</title>
   <meta name="author" content="RubenPerezIII">
-  <meta name="keywords" content="">
   <meta name="description" content="Multimedia Quality Assurance Test Engineer.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="">
   <meta property="og:type" content="">
   <meta property="og:url" content="">
   <meta property="og:image" content="">
-
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" type="css/extra.css" href="css/extra.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Particle Effect</title>
   <style>
-    /* CSS to style the canvas element */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff; /* Background color of the canvas */
-      z-index: -1; /* Place the canvas behind other elements */
-    }
     body {
-      margin: 0;
+      margin: 5px;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -43,110 +27,97 @@
       background-size: cover;
       background-position: center;
     }
-    
     header {
       text-align: center;
       margin-top: 0;
     }
-    
     nav ul {
       list-style-type: none;
       padding: 0;
-      margin-top: -5px;
+      margin-top: 5px;
       text-align: center;
     }
-    
     nav ul li {
       display: inline;
       margin-inline: 20px;
     }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a {
+    h1, h2, h3, h4, h5, h6, p, a {
       text-align: center;
-      color: rgb(103, 177, 246);
+      color: rgb(217, 129, 255);
       font-family: "Audiowide", sans-serif;
       font-size: 24px;
     }
-    
     h1.text-effect {
       font-size: 75px;
     }
-    
+    /* Style for the clickable button */
+    .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff; /* Change text color if necessary */
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 10px;
+    }
+    /* Style for section titles */
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      position: fixed;
+      top: 10px;
+      /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title {
+      margin: 50px 50px 0px 20px;
+    }
+
+    footer {
+      width: 100%;
+      background-color: #ffffff; /* Adjust background color as needed */
+      padding: 10px 0;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+    }
+
+
+
+
     /* Style for the videos container */
     .videos-container {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      margin-top: 0px;
+      margin-top: 36px;
+      margin-bottom: 0px;
       width: 100%;
-      overflow-x: hidden; /* Hide overflow */
-      transition: margin-left 2s; /* Smooth transition for margin-left */
+      overflow-x: hidden;
+      transition: margin-left 2s;
     }
-    /* Style for the jazzalley video dimensions */
-    .video.jazz-alley-video video,
-    .video.qclub-video video {
-      width: 480px; /* Adjust the width as needed */
-      height: 360px; /* Adjust the height as needed */
-      object-fit: cover; /* Crop the video */
-      opacity: 0; /* Initially hide video */
-      animation: fadeIn 2s ease-in-out forwards; /* Add fade-in animation */
-    }
-
     /* Style for each video */
     .video {
-      margin: 0 45px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
     }
-    
-    
-
-
     /* Style for video dimensions */
     video {
-      width: 360px; /* Initial width */
-      height: 640px; /* Initial height */
+      width: 640px;
+      height: 360px;
       transition: transform 0.5s ease-in-out;
     }
-    .slide-left:hover {
-      transform: translateX(-50%); /* Slide left by 50% */
-    }
-    .slide-right:hover {
-      transform: translateX(50%); /* Slide right by 50% */
-}
-
-    /* Adjust video size for smaller screens */
     @media screen and (max-width: 768px) {
       video {
         width: 90%;
         height: auto;
       }
     }
-
-    /* Particle effect */
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
-    
-    .particle {
-      position: absolute;
-      background-color: rgb(103, 177, 246);
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      animation: particle-animation 2s ease-out infinite;
-    }
-    
     @keyframes particle-animation {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -157,14 +128,6 @@
         opacity: 0;
       }
     }
-    
-    /* Style for the equalizer canvas */
-    canvas {
-      width: 100%;
-      height: 150px;
-      background-color:;
-    }
-    
     /* Fade-in animation */
     @keyframes fadeIn {
       0% {
@@ -174,55 +137,257 @@
         opacity: 1;
       }
     }
+
+
+    /* Style for gallery */
+    .gallery {
+      position: relative;
+      width: 640px; /* Adjust width */
+      height: 360px; /* Adjust height */
+      overflow: hidden;
+    }
+
+    .photo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+
+    .photo.active {
+      opacity: 1;
+      z-index: 1;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Previous and Next buttons */
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      font-size: 18px;
+    }
+
+    .prev {
+      left: 0;
+    }
+
+    .next {
+      right: 0;
+    }
+
   </style>
 </head>
-
 <body>
-
   <header>
-    <h1 class="text-effect">Ruben Perez III</h1>
-  </header>
-
-  <nav>
+    <!-- Clickable title button -->
+    <div class="title-button" onclick="location.href='home.html';">Ruben Perez III</div>
+    <!-- Section titles -->
+    <!-- <div class="section-titles">
+      <h2 class="section-title"><a href="liveAV.html">Sound/Lighting</a></h2>
+      <h2 class="section-title"><a href="beats.html">Beats</a></h2>
+      <h2 class="section-title"><a href="electronics.html">Electronics</a></h2>
+    </div> -->
+  </header> 
+  
+  <!-- <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="#contact">Contact</a></li>
       <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
-      <li><a href="#about">About</a></li>
+      <li><a href="About.html">About</a></li>
     </ul>
-  </nav>
+  </nav> -->
 
   <!-- Videos container -->
   <div class="videos-container" id="videos-container">
     <!-- First video -->
-    <div class="video">
-      <video autoplay loop>
-        <source src="lighttech_motion.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <!-- Second video -->
     <div class="video qclub-video" style="margin: 0;">
       <video controls class="qclub-video">
         <source src="qclub_3_clip.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <p>Q Nightclub - LD</p>
+      <!-- Add text description here -->
     </div>
-    <!-- Third video -->
+    <!-- Second video -->
     <div class="video jazz-alley-video" style="margin: 0;">
       <video controls class="jazz-alley-video">
         <source src="jazzalley_1_clip.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+      <p>Jazz Alley - FOH</p>
+      <!-- Add text description here -->
+    </div>
+    <!-- Third video -->
+    <div class="video jazz-alley-video" style="margin: 0;">
+      <video controls class="jazz-alley-video">
+        <source src="qclub_iphone_clip_2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Q Nightclub - LD</p>
+      <!-- Add text description here -->
+    </div>
+    <!-- Fourth video -->
+    <div class="video jazz-alley-video" style="margin: 0;">
+      <video controls class="jazz-alley-video">
+        <source src="jazzalley_iphone_clip_4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p>Jazz Alley - FOH</p>
+      <!-- Add text description here -->
     </div>
   </div>
 
-  <script>
-    // Trigger cool effect animation
-    window.onload = function() {
-      var coolEffect = document.getElementById('cool-effect');
-      coolEffect.classList.add('cool-effect-animation');
-    };
-  </script>
+  <!-- Gallery -->
+<div class="gallery">
+  <!-- Photos -->
+  <div class="photo active">
+    <img class="jazz-alley-image" src="jazzalley_m7cl.jpg" alt="Jazz Alley - FOH">
+    <p>FOH M7CL Console</p>
+  </div>
+  <div class="photo">
+    <img class="jazz-alley-image" src="jazzalley_stage.jpg" alt="Jazz Alley - Stage">
+    <p>Jazz Alley Stage</p>
+  </div>
+  <div class="photo">
+    <img class="jazz-alley-image" src="jazzalley_stageright.JPG" alt="Jazz Alley - Stage Right">
+    <p>Stage Right</p>
+  </div>
+
+  <!-- Previous and Next buttons -->
+  <button class="prev" onclick="prevPhoto()">&#10094;</button>
+  <button class="next" onclick="nextPhoto()">&#10095;</button>
+</div>
+
+<style>
+  /* Style for Previous and Next buttons */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 999;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+</style>
+
+
+<script>
+  // Get all images and buttons
+  const photos = document.querySelectorAll('.photo');
+  const prevButton = document.querySelector('.prev');
+  const nextButton = document.querySelector('.next');
+  const enlargedImagesContainer = document.getElementById('enlargedImages');
+
+  // Initialize current index
+  let currentIndex = 0;
+
+  // Function to show the current photo and hide others
+  function showPhoto(index) {
+    photos.forEach((photo, idx) => {
+      if (idx === index) {
+        photo.classList.add('active');
+      } else {
+        photo.classList.remove('active');
+      }
+    });
+  }
+
+  // Function to show previous photo
+  function prevPhoto() {
+    currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+    showPhoto(currentIndex);
+  }
+
+  // Function to show next photo
+  function nextPhoto() {
+    currentIndex = (currentIndex + 1) % photos.length;
+    showPhoto(currentIndex);
+  }
+
+  // Add click event listeners to previous and next buttons
+  prevButton.addEventListener('click', prevPhoto);
+  nextButton.addEventListener('click', nextPhoto);
+
+  // Add click event listener to each photo to enlarge
+  photos.forEach((photo, index) => {
+    photo.addEventListener('click', () => {
+      enlargedImagesContainer.innerHTML = '';
+      const img = photo.querySelector('img').cloneNode(true);
+      enlargedImagesContainer.appendChild(img);
+      enlargedImagesContainer.classList.add('enlarged');
+    });
+  });
+
+  // Add click event listener to close enlarged image
+  enlargedImagesContainer.addEventListener('click', () => {
+    enlargedImagesContainer.classList.remove('enlarged');
+  });
+</script>
+
+<style>
+  /* Style for previous and next buttons */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 20px;
+    z-index: 9999;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  /* Hide scrollbars when image enlarged */
+  body.enlarged {
+    overflow: hidden;
+  }
+</style>
+
+<!-- <footer>
+  <nav>
+    <ul>
+    </ul>
+  </nav>
+</footer>  -->
+
+
 </body>
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <title>RubenPerezIII</title>
@@ -25,16 +24,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Particle Effect</title>
   <style>
-    /* CSS to style the canvas element */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      background-color: #ffffff; /* Background color of the canvas */
-      z-index: -1; /* Place the canvas behind other elements */
-    }
-    body {
-      margin: 0;
+
+body {
+      margin: 5px;
       padding: 0;
       display: flex;
       flex-direction: column;
@@ -43,42 +35,56 @@
       background-size: cover;
       background-position: center;
     }
-    
     header {
       text-align: center;
       margin-top: 0;
     }
-    
     nav ul {
       list-style-type: none;
       padding: 0;
-      margin-top: -5px;
+      margin-top: 5px;
       text-align: center;
     }
-    
     nav ul li {
       display: inline;
       margin-inline: 20px;
     }
-    
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    a {
+    h1, h2, h3, h4, h5, h6, p, a {
       text-align: center;
-      color: rgb(103, 177, 246);
+      color: rgb(217, 129, 255);
       font-family: "Audiowide", sans-serif;
       font-size: 24px;
     }
-    
     h1.text-effect {
       font-size: 75px;
     }
-    
+        /* Style for the clickable button */
+        .title-button {
+      cursor: pointer;
+      text-decoration: none;
+      color: #87f1ff; /* Change text color if necessary */
+      font-family: "Audiowide", sans-serif;
+      font-size: 110px;
+      margin-bottom: 10px; /* Adjust as needed */
+    }
+
+    /* Style for section titles */
+    .section-titles {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+      position: fixed;
+      top: 10px;
+      /* Adjust as needed */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .section-title {
+      margin: 50px 50px 0px 20px;
+    }
+
+  
    /* Style for the videos container */
    .videos-container {
       display: flex;
@@ -88,18 +94,8 @@
       width: 100%;
       overflow-x: auto;
       transition: margin-left 2s; /* Smooth transition for margin-left */
-    }
-    
-    /* Style for each video */
-    .video {
-      margin: 0 45px;
-    }
-    
-    /* Style for video dimensions */
-    video {
-      width: 360px;
-      height: 640px;
-    }
+    } 
+
 
     /* Adjust video size for smaller screens */
     @media screen and (max-width: 768px) {
@@ -111,9 +107,9 @@
     
     /* Style for the music section */
     .music-section {
-      background-color: transparent;
-      color: rgb(255, 152, 152);
-      padding: 0 0;
+      background-color: rgb(0, 0, 0);
+      color: #576062;
+      padding: 0px 0px;
       text-align: center;
       opacity: 0; /* Initially set opacity to 0 */
       animation: fade-in 3s forwards; /* Apply fade-in animation */
@@ -132,70 +128,63 @@
       }
     }
    
-    .music-section h2 {
-      font-size: 30px;
-      margin-bottom: 5px;
+/* Style for individual section titles */
+.section-title:nth-of-type(1) {
+      margin: 0 20px; /* top right bottom left */
     }
     
-    .music-player {
-      display: flex;
-      flex-direction: column; /* Change to column to stack vertically */
-      justify-content: center;
-      align-items: center;
-      margin-top: 50px;
-    }
-    
-    .music-player audio {
-      width: 420px;
-      height: 100px;
-      transition: margin-top 2s; /* Smooth transition for margin-top */
+    /* Style for individual section titles */
+    .section-title:nth-of-type(2) {
+      margin: 0 0px; /* top right bottom left */
     }
 
-    /* Animation to move video to the left */
-    .move-left {
-      margin-left: -900px;
+    /* Style for individual section titles */
+    .section-title:nth-of-type(3) {
+      margin: 0 20px; /* top right bottom left */
     }
 
-    /* Animation to move music station audio songs upward */
-    .move-up {
-      margin-top: -645px;
+    .resume-links {
+      margin-bottom: 0px;
     }
     
-    /* Particle effect */
-    .particles {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
+    /* Style for the music player */
+.music-player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+
+/* Style for the playback control buttons on hover */
+.controls button:hover {
+  text-decoration: underline;
+}
+    
+    /* Style for each audio track */
+    .audio-track {
+      margin-bottom: 10px;
+      margin-top: 20px;
+
     }
     
-    .particle {
-      position: absolute;
-      background-color: rgb(103, 177, 246);
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      animation: particle-animation 2s ease-out infinite;
+    /* Style for audio track titles */
+    .audio-title {
+      font-size: 25px;
+      margin-bottom: 15px;
     }
-    
-    @keyframes particle-animation {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) rotate(720deg);
-        opacity: 0;
-      }
+
+    /* Style for audio track duration */
+    .audio-duration {
+      font-size: 14px;
+      color: #000000;
     }
-    
+
     /* Style for the equalizer canvas */
     canvas {
       width: 100%;
       height: 150px;
-      background-color:;
     }
   </style>
 </head>
@@ -203,43 +192,30 @@
 <body>
 
   <header>
-    <h1 class="text-effect">Ruben Perez III</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
-      <li><a href="#about">About</a></li>
-    </ul>
-  </nav>
-
-  <!-- Videos container -->
-  <div class="videos-container" id="videos-container">
-    <!-- Second video -->
-    <div class="video">
-      <video autoplay loop>
-        <source src="cyberpunk_motion.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-
-  <br>
+    <!-- Clickable title button -->
+   <div class="title-button" onclick="location.href='home.html';">Ruben Perez III</div>
+  </header> 
 
   <!-- Music section -->
   <section class="music-section" id="music-section">
-    <h2>Music Station</h2>
+    <h2>Beats Station</h2>
     <div class="music-player">
-      <audio controls controlsList="nodownload nopreviousplaybackrate nonextplaybackrate">
-        <source src="After7_loop_142bpm.wav" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <audio controls controlsList="nodownload nopreviousplaybackrate nonextplaybackrate">
-        <source src="Untitled_LA_14.wav" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      <!-- Audio tracks -->
+      <div class="audio-track">
+        <div class="audio-title">After7 Loop (142bpm)</div>
+        <audio controls controlsList="nodownload nopreviousplaybackrate nonextplaybackrate">
+          <source src="After7_loop_142bpm.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="audio-track">
+        <div class="audio-title">Untitled LA 14</div>
+        <audio controls controlsList="nodownload nopreviousplaybackrate nonextplaybackrate">
+          <source src="Untitled_LA_14.wav" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <!-- Add more audio tracks as needed -->
     </div>
     <!-- Particle effects -->
     <div class="particles"></div>
@@ -247,6 +223,7 @@
     <canvas id="equalizer"></canvas>
   </section>
 
+  
   <!-- Add your site or application content here -->
 
   <script src="js/vendor/modernizr-3.11.2.min.js"></script>
@@ -273,53 +250,74 @@
   </script>
 
   <!-- JavaScript for audio equalizer spectrum visualizer -->
-  <script>
-    // Create the audio context
-    const AudioContext = window.AudioContext || window.webkitAudioContext;
-    const audioContext = new AudioContext();
+<script>
+  // Create the audio context
+  const AudioContext = window.AudioContext || window.webkitAudioContext;
+  const audioContext = new AudioContext();
 
-    // Create an analyser node
+  // Get all audio elements
+  const audioElements = document.querySelectorAll('audio');
+
+  // Create analyser nodes for each audio element
+  const analysers = Array.from(audioElements).map(audio => {
     const analyser = audioContext.createAnalyser();
     analyser.fftSize = 256;
-
-    // Connect the analyser to the audio source
-    const audioElement = document.querySelector('audio');
-    const audioSource = audioContext.createMediaElementSource(audioElement);
+    const audioSource = audioContext.createMediaElementSource(audio);
     audioSource.connect(analyser);
     audioSource.connect(audioContext.destination);
+    return analyser;
+  });
 
-    // Get the canvas element for drawing the equalizer
-    const canvas = document.getElementById('equalizer');
-    const canvasContext = canvas.getContext('2d');
+  // Get the canvas element for drawing the equalizer
+  const canvas = document.getElementById('equalizer');
+  const canvasContext = canvas.getContext('2d');
 
-    // Function to draw the equalizer
-    function draw() {
-      const bufferLength = analyser.frequencyBinCount;
-      const dataArray = new Uint8Array(bufferLength);
+  // Function to draw the equalizer
+  function draw() {
+    const bufferLength = analysers[0].frequencyBinCount; // Use the first analyser's buffer length
+    const dataArray = new Uint8Array(bufferLength);
 
-      // Clear the canvas
-      canvasContext.clearRect(0, 0, canvas.width, canvas.height);
+    // Clear the canvas
+    canvasContext.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Get the frequency data
+    // Draw the equalizer bars for each analyser
+    analysers.forEach(analyser => {
       analyser.getByteFrequencyData(dataArray);
-
-      // Draw the equalizer bars
       const barWidth = canvas.width / bufferLength;
+      const barHeightMultiplier = 1; // Increase bar height
       let x = 0;
       for (let i = 0; i < bufferLength; i++) {
-        const barHeight = dataArray[i] / 2;
-        canvasContext.fillStyle = `rgb(${barHeight}, 0, 0)`;
-        canvasContext.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+        const barHeight = dataArray[i] * barHeightMultiplier / 255; // Scale bar height
+        canvasContext.fillStyle = `rgba(103, 177, 246, ${barHeight})`; // Blue color with varying alpha
+        canvasContext.fillRect(x, canvas.height - barHeight * canvas.height, barWidth, barHeight * canvas.height);
         x += barWidth + 1;
       }
+    });
 
-      // Call draw function recursively
-      requestAnimationFrame(draw);
-    }
+    // Call draw function recursively
+    requestAnimationFrame(draw);
+  }
 
-    // Start drawing the equalizer
-    draw();
-  </script>
+  // Start drawing the equalizer
+  draw();
+</script>
+<!-- Add your site or application content here -->
+
+ 
+
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- <footer>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li> -->
+      <!-- <li><a href="https://www.linkedin.com/in/rubenaperez/" target="_blank">LinkedIn</a></li>
+      <li><a href="About.html">About</a></li>
+    </ul>
+  </nav>
+</footer> -->
 
 </body>
 
